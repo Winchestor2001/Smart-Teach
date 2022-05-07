@@ -1,0 +1,16 @@
+asgiref==3.5.1
+certifi==2020.6.20
+chardet==3.0.4
+Django==4.0.4
+django-ckeditor==6.4.0
+django-js-asset==1.2.2
+idna==2.10
+Pillow==9.1.0
+pycodestyle==2.6.0
+pytz==2020.1
+requests==2.24.0
+sqlparse==0.3.1
+toml==0.10.1
+tzdata==2022.1
+urllib3==1.25.10
+zope.interface==5.1.2

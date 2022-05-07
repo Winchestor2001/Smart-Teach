@@ -1,0 +1,51 @@
+{%extends 'base_menubar.html'%}
+{% load static %}
+{% block head%}
+<title>Bizning maqsad g`oyalarimiz haqida</title>
+{% endblock %}
+{% block content %}
+<section class="banner_area">
+    <div class="banner_inner d-flex align-items-center">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="banner_content text-center">
+                        <h2>Respublikalararo markazlar</h2>
+                        <div class="page_link">
+                            <a href="{% url 'index'%}">Bosh sahifa</a>
+                            <a href="{% url 'education_center'%}">Respublikalararo markazlar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================ Start About Area =================-->
+<div style="position:fixed;right:0px">
+    <input type="button" class="btn btn-primary">
+</div>
+<div class="container">
+    <div class="row">
+        {% for i in data %}
+        <div class="col-md-5 mt-5 mb-5">
+            <p><img src="/media/{{i.school_logo|safe}}" alt="" width="300" height="300"></p>
+        </div>
+        <div class="col-md-6 mt-5 mb-5" style="text-align:justify; line-height:20px;">
+            <h2 class="text-center">{{i.school_name}}</h2>
+            <p><span><img src="{% static 'images/kitob.png'%}" width='35' height='35'/>&nbsp;&nbsp;{{i.science|safe}}</span></p>
+            <p><span><img src="{% static 'images/lang.png'%}" width='35' height='40'/>&nbsp;&nbsp;{{i.lang|safe}}</span></p>
+            <p><span><img src="{% static 'images/call.png'%}" width='30' height='30'/></span>&nbsp;&nbsp;&nbsp;+{{i.contact_number}}</p>
+            <p><span><img src="{% static 'images/web.png'%}" width='30' height='35'/></span>&nbsp;&nbsp;&nbsp;{{i.website}}&nbsp;&nbsp;&nbsp;
+                <a href="{{i.facebook}}" ><img src="{% static 'images/face.png' %}" alt="" width="40" height="38"></a>&nbsp;&nbsp;
+                <a href="{{i.telegram}}" ><img src="{% static 'images/telegram.png' %}" alt="" width="35" height="32"></a>&nbsp;&nbsp;
+                <a href="{{i.instagram}}" ><img src="{% static 'images/inst.png' %}" alt="" width="35" height="35"></a>&nbsp;&nbsp;
+                <a href="{{i.youtube}}" ><img src="{% static 'images/you.png' %}" alt="" width="50" height="50"></a>
+            <p><span><img src="{% static 'images/geod.png'%}" width='30' height='35'/></span>&nbsp;&nbsp;&nbsp;{{i.provin}} viloyati ,{{i.address}}</p>
+        </div>
+        {% endfor%}
+    </div>
+</div><br/>
+<!--================ End About Area =================-->
+{% endblock %}

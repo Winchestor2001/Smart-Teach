@@ -1,0 +1,424 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block head%}
+<title>SmartTeach.uz Bilimingizni sinash uchun ajoyib tanlov</title>
+<style>
+    #submitbtn:hover.message{
+        display: block;
+    }
+
+
+</style>
+{% endblock %}
+{% block content %}
+<!--================ Start Home Banner Area =================-->
+<section class="home_banner_area">
+    <div class="banner_inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="banner_content text-center">
+                        <p class="text-uppercase">
+                            Ishtiyoq haroratdan dalolat
+                        </p>
+                        <h2 class="text-uppercase mt-4 mb-5">
+                            Hayot doirasida munosib o'rningni top
+                        </h2>
+                        <div>
+                            <a href="{% url 'education_center'%}" class="primary-btn2 mb-3 mb-sm-0">Markazlar</a>
+                            <a href="{% url 'languages'%}" class="primary-btn ml-sm-3 ml-0">Tillar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!--================ End Home Banner Area =================-->
+
+<!--================ Start Feature Area =================-->
+<section class="feature_area section_gap_top">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="main_title">
+                    <h2 class="mb-3">Nima uchun <span style="color:#FDC635">SmartTeach</span> ?</h2>
+                    <p>
+                        Saytdan foydalanishning afzalliklari
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="single_feature">
+                    <div class="icon"><span class="flaticon-student"></span></div>
+                    <div class="desc">
+                        <h4 class="mt-3 mb-2">O'quv markazlari</h4>
+                        <p>
+                            O'zingizga yaqin qulay ishonchli o'quv markazni tanlang
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="single_feature">
+                    <div class="icon"><span class="flaticon-book"></span></div>
+                    <div class="desc">
+                        <h4 class="mt-3 mb-2">Online bellashuv</h4>
+                        <p>
+                            Ingliz tilidan o'z bilim darajangizni bilib oling
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="single_feature">
+                    <div class="icon"><span class="flaticon-earth"></span></div>
+                    <div class="desc">
+                        <h4 class="mt-3 mb-2">Maxsus Sertifikat</h4>
+                        <p>
+                            O'zbekiston va viloyatlar kesimida bilim darajangiz
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================ End Feature Area =================-->
+
+<!--================ Start Popular Courses Area =================-->
+<div class="popular_courses">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5">
+                <div class="main_title">
+                    <h2 class="mb-3">Biz tavsiya qilamiz</h2>
+                    <p>
+                        Siz uchun - ajoyib qo'llanmalar va audio videolardan qulay va oson foydalaning 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- single course -->
+            <div class="col-lg-12">
+                <div class="owl-carousel active_course">
+                    <div class="single_course">
+                        <div class="course_head">
+                            <img class="img-fluid" src="{% static 'img/courses/c1.jpg'%}" style="object-fit: cover;object-position: bottom;" alt=""/>
+                        </div>
+                        <div class="course_content">
+                            <span class="price">$5</span>
+                            <span class="tag mb-4 d-inline-block">Yoqdi</span>
+                            <h4 class="mb-3">
+                                <a href="course-details.html">Koreys tili gramatikasi</a>
+                            </h4>
+                            <p>
+                                Boshlang'ich / O'rta va Yuqori darajadagi gramatikalar birlashmasi o'zbek tilida
+                            </p>
+                            <div
+                                    class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
+                            >
+                                <div class="authr_meta">
+                                    <img src="{% static 'img/courses/author1.png'%}" alt=""/>
+                                    <span class="d-inline-block ml-2">Cameron</span>
+                                </div>
+                                <div class="mt-lg-0 mt-3">
+                      <span class="meta_info mr-4">
+                        <a href="#"> <i class="ti-user mr-2"></i>25 </a>
+                      </span>
+                                    <span class="meta_info"
+                                    ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="single_course">
+                        <div class="course_head">
+                            <img class="img-fluid" src="{% static 'img/courses/c2.jpg'%}" alt=""/>
+                        </div>
+                        <div class="course_content">
+                            <span class="price">$25</span>
+                            <span class="tag mb-4 d-inline-block">Yoqdi</span>
+                            <h4 class="mb-3">
+                                <a href="course-details.html">Kerakli lug'atlar</a>
+                            </h4>
+                            <p>
+                                Eng muhim va kerakli so'zlarni o'zida jam lug'atlar to'plami. 
+                                Mavzulashtirilgan holatda bo'lib siz uchun qulay qo'llanma.
+                            </p>
+                            <div
+                                    class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
+                            >
+                                <div class="authr_meta">
+                                    <img src="{% static 'img/courses/author2.png'%}" alt=""/>
+                                    <span class="d-inline-block ml-2">Cameron</span>
+                                </div>
+                                <div class="mt-lg-0 mt-3">
+                      <span class="meta_info mr-4">
+                        <a href="#"> <i class="ti-user mr-2"></i>25 </a>
+                      </span>
+                                    <span class="meta_info"
+                                    ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="single_course">
+                        <div class="course_head">
+                            <img class="img-fluid" src="{% static 'img/courses/c3.jpg'%}" alt=""/>
+                        </div>
+                        <div class="course_content">
+                            <span class="price">$10</span>
+                            <span class="tag mb-4 d-inline-block">Yoqdi</span>
+                            <h4 class="mb-3">
+                                <a href="course-details.html">Reshila hangugo</a>
+                            </h4>
+                            <p>
+                                Yangicha dizayn qiziqarli eshitish / yozish / o'qish ajoyib mavzularga ega bo'lgan o'rganish uhcun juda qulay boshlang'ich qo'llanma
+                            </p>
+                            <div
+                                    class="course_meta d-flex justify-content-lg-between align-items-lg-center flex-lg-row flex-column mt-4"
+                            >
+                                <div class="authr_meta">
+                                    <img src="{% static 'img/courses/author3.png'%}" alt=""/>
+                                    <span class="d-inline-block ml-2">Cameron</span>
+                                </div>
+                                <div class="mt-lg-0 mt-3">
+                      <span class="meta_info mr-4">
+                        <a href="#"> <i class="ti-user mr-2"></i>25 </a>
+                      </span>
+                                    <span class="meta_info"
+                                    ><a href="#"> <i class="ti-heart mr-2"></i>35 </a></span
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--================ End Popular Courses Area =================-->
+
+<!--================ Start Registration Area =================-->
+<div class="section_gap registration_area">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <div class="row clock_sec clockdiv" id="clockdiv">
+                    <div class="col-lg-12">
+                        <h1 class="mb-3">Imtihon sanasi</h1>
+                        <p>
+                            Belgilangan muddat ichida imtihonga ro'yxatdan o'tishingiz mumkin. 
+                            Ro'yxatdan o'tmagan holatda imtihonda qatnasha olmaysiz!
+                        </p>
+                    </div>
+                    <div class="col clockinner1 clockinner">
+                        <h1 class="days">3</h1>
+                        <span class="smalltext">Kun</span>
+                    </div>
+                    <div class="col clockinner clockinner1">
+                        <h1 class="hours">4</h1>
+                        <span class="smalltext">Soat</span>
+                    </div>
+                    <div class="col clockinner clockinner1">
+                        <h1 class="minutes">25</h1>
+                        <span class="smalltext">Minut</span>
+                    </div>
+                    <div class="col clockinner clockinner1">
+                        <h1 class="seconds">00</h1>
+                        <span class="smalltext">Soniya</span>
+                    </div>
+                </div>
+            </div>
+            <!--mesenjer fikr mulohazalar uhcun ajratilgan joy -->
+            
+        </div>
+    </div>
+</div>
+<!--================ End Registration Area =================-->
+
+<!--================ Start Trainers Area =================-->
+<section class="trainer_area section_gap_top">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5">
+                <div class="main_title">
+                    <h2 class="mb-3">SmartTeach Jamoasi</h2>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, quos!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center d-flex align-items-center">
+
+            <div class="col-lg-4 col-md-6 col-sm-12 single-trainer">
+                <div class="thumb d-flex justify-content-sm-center">
+                    <img class="card-img-top" style="height:300px;object-fit:cover; object-position: top;" src="{% static 'img/me.jpg'%}" alt=""/>
+                </div>
+                <div class="meta-text text-sm-center">
+                    <h4>Islomjon Makhamadjanov</h4>
+                    <p class="designation">Founder. Backend Developer</p>
+                    <div class="mb-4">
+                        <p>
+                            Ko'plab Jamoaviy loyihalarda qatnashgan .Tajriba 2+ yil
+                        </p>
+                    </div>
+                    <div class="align-items-center justify-content-center d-flex">
+                        <a href="#"><i class="ti-facebook"></i></a>
+                        <a href="#"><i class="ti-twitter"></i></a>
+                        <a href="#"><i class="ti-linkedin"></i></a>
+                        <a href="#"><i class="ti-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 single-trainer">
+                <div class="thumb d-flex justify-content-sm-center">
+                    <img class="card-img-top" style="height:300px ;object-fit:cover; object-position: top;" src="{% static 'img/avazxon.jpg'%}" alt=""/>
+                </div>
+                <div class="meta-text text-sm-center">
+                    <h4>Avazbek Ubaydullayev</h4>
+                    <p class="designation">Android Developer</p>
+                    <div class="mb-4">
+                        <p>
+                             Mobil Ilovalarni yaratish bo'yicha mutaxassis .Tajriba 3+ yil
+
+                        </p>
+                    </div>
+                    <div class="align-items-center justify-content-center d-flex">
+                        <a href="#"><i class="ti-facebook"></i></a>
+                        <a href="#"><i class="ti-twitter"></i></a>
+                        <a href="#"><i class="ti-linkedin"></i></a>
+                        <a href="#"><i class="ti-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 single-trainer">
+                <div class="thumb d-flex justify-content-sm-center">
+                    <img class="card-img-top" style="height:300px ;object-fit:cover; object-position: top;" src="{% static 'img/behruz.jpg'%}" alt=""/>
+                </div>
+                <div class="meta-text text-sm-center">
+                    <h4>Behruz Sayfiddinov</h4>
+                    <p class="designation">Frontend Developer</p>
+                    <div class="mb-4">
+                        <p>
+                            O'z ishini ustasi kreativ fikrlaydigan Frontend Ustasi.Tajriba 1.5+ yil
+                        </p>
+                    </div>
+                    <div class="align-items-center justify-content-center d-flex">
+                        <a href="#"><i class="ti-facebook"></i></a>
+                        <a href="#"><i class="ti-twitter"></i></a>
+                        <a href="#"><i class="ti-linkedin"></i></a>
+                        <a href="#"><i class="ti-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================ End Trainers Area =================-->
+
+<!--================ Start Events Area =================-->
+<div class="events_area">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5">
+                <div class="main_title">
+                    <h2 class="mb-3 text-white">Tanlang</h2>
+                    <p>
+                        Replenish man have thing gathering lights yielding shall you
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="single_event position-relative">
+                    <div class="event_thumb">
+                        <img src="{% static 'img/event/e1.jpg'%}" alt=""/>
+                    </div>
+                    <div class="event_details">
+                        <div class="d-flex mb-4">
+                            <div class="date"><span>15</span> Jun</div>
+
+                            <div class="time-location">
+                                <p>
+                                    <span class="ti-time mr-2"></span> 12:00 AM - 12:30 AM
+                                </p>
+                                <p>
+                                    <span class="ti-location-pin mr-2"></span> Hilton Quebec
+                                </p>
+                            </div>
+                        </div>
+                        <p>
+                            One make creepeth man for so bearing their firmament won't
+                            fowl meat over seas great
+                        </p>
+                        <a href="#" class="primary-btn rounded-0 mt-3">View Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="single_event position-relative">
+                    <div class="event_thumb">
+                        <img src="{% static 'img/event/e2.jpg'%}" alt=""/>
+                    </div>
+                    <div class="event_details">
+                        <div class="d-flex mb-4">
+                            <div class="date"><span>15</span> Jun</div>
+
+                            <div class="time-location">
+                                <p>
+                                    <span class="ti-time mr-2"></span> 12:00 AM - 12:30 AM
+                                </p>
+                                <p>
+                                    <span class="ti-location-pin mr-2"></span> Hilton Quebec
+                                </p>
+                            </div>
+                        </div>
+                        <p>
+                            One make creepeth man for so bearing their firmament won't
+                            fowl meat over seas great
+                        </p>
+                        <a href="#" class="primary-btn rounded-0 mt-3">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="text-center pt-lg-5 pt-3">
+                    <a href="#" class="event-link">
+                        View All Event <img src="{% static 'img/next.png'%}" alt=""/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--================ End Events Area =================-->
+
+<!--================ Start Testimonial Area =================-->
+
+<!--================ End Testimonial Area =================-->
+</section>
+{% if status %}
+<script>
+    alert('{{status}}');
+    window.location = '/'
+</script>
+{% endif %}
+{% endblock %}
